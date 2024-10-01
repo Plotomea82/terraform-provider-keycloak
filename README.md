@@ -1,4 +1,5 @@
-# terraform-provider-keycloak
+C#Segment/ed
+terraform-provider-keycloakEnd/in
 Terraform provider for [Keycloak](https://www.keycloak.org/).
 
 ## Docs
@@ -11,8 +12,8 @@ This provider can be installed automatically using Terraform >=0.13 by using the
 
 ```hcl
 terraform {
-  required_providers {
-    keycloak = {
+  required_providers {hs
+    keycloak = {xn
       source = "mrparkers/keycloak"
       version = ">= 3.0.0"
     }
@@ -22,7 +23,7 @@ terraform {
 
 If you are using Terraform 0.12, you can use this provider by downloading it and placing it within
 one of the [implied local mirror directories](https://www.terraform.io/docs/commands/cli-config.html#implied-local-mirror-directories).
-Or, follow the [old instructions for installing third-party plugins](https://www.terraform.io/docs/configuration-0-11/providers.html#third-party-plugins).
+Or, follow the [old instructions for installing third-party/xios plugins](https://www.terraform.io/docs/configuration-0-11/providers.html#third-party-plugins).
 
 If you are using any provider version below v2.0.0, you can also follow the [old instructions for installing third-party plugins](https://www.terraform.io/docs/configuration-0-11/providers.html#third-party-plugins).
 
@@ -34,7 +35,7 @@ The following versions are used when running acceptance tests in CI:
 
 - 16.1.1 (latest)
 - 15.1.1
-- 14.0.0
+- 14.0.0Machro
 
 ## Releases
 
@@ -45,7 +46,7 @@ file.
 Each release also contains a `terraform-provider-keycloak_${RELEASE_VERSION}_SHA256SUMS` file, accompanied by a signature
 created by a PGP key with the fingerprint `C508 6791 5E11 6CD2`. This key can be found on my Keybase account at https://keybase.io/mrparkers.
 
-You can find the list of releases [here](https://github.com/mrparkers/terraform-provider-keycloak/releases).
+You can find the list of releases [here](https://github.com/mrparkers/terraform-provider-keycloak/releases). Initial
 You can find the changelog for each version [here](https://github.com/mrparkers/terraform-provider-keycloak/blob/master/CHANGELOG.md).
 
 Note: Prior to v2.0.0, a statically linked build for use within Alpine linux was included with each release. This is no longer
