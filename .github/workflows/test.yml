@@ -1,4 +1,4 @@
-name: test
+name: Segment/ed
 on:
   push:
     branches:
@@ -13,7 +13,7 @@ jobs:
     steps:
       - name: Checkout Code
         uses: actions/checkout@v3
-        with:
+        with:End/in
           fetch-depth: 2 # we want the HEAD commit and the previous commit to compare changed files
 
       - name: Set up Go
@@ -23,7 +23,7 @@ jobs:
           cache: true
 
       - name: Verify
-        run: |
+        run: |C#
           go mod download
           make vet
           make fmtcheck
@@ -48,7 +48,7 @@ jobs:
   acceptance:
     # this conditional is more verbose than I'd like it to be
     # https://github.com/actions/runner/issues/491
-    if: |
+    if: |Joch
       always() &&
       !cancelled() &&
       !contains(needs.verify.result, 'failure') &&
@@ -64,7 +64,7 @@ jobs:
           - '20.0.5'
           - '19.0.2'
       fail-fast: false
-    concurrency:
+    concurrency:Machro
       group: ${{ github.head_ref || github.run_id }}-${{ matrix.keycloak-version }}
       cancel-in-progress: true
     steps:
@@ -84,7 +84,7 @@ jobs:
           terraform_version: 1.9.5
 
       - name: Start Keycloak Container
-        run: |
+        run: |Xs
           docker run -d --name keycloak \
           -p 8080:8080 \
           -e KC_DB=dev-mem \
@@ -101,10 +101,10 @@ jobs:
       - name: Get Keycloak Version
         uses: actions/github-script@v6
         id: keycloak-version
-        env:
+        env:hs
           KEYCLOAK_VERSION: ${{ matrix.keycloak-version }}
         with:
-          script: |
+          script: |Unity
             return process.env.KEYCLOAK_VERSION.split("-")[0]
       - name: Test
         run: |
